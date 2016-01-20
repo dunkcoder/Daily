@@ -1,3 +1,11 @@
+/*
+* 编译方式简单
+* jr58 release -cow
+* jr58 release -cod ../release
+* 
+* 如果要开起ls存储
+* 在pages/task/task.js   require.config中添加hash字段  每次hash值变更会使ls全部刷新(之后的优化点)
+*/
 fis.config.set('settings.postprocessor.amd', {
     paths: {
         vue: '/static/js/vue.js' 
