@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="/static/css/common.scss?__inline">
+</head>
+<body ontouchstart="">
+	<div id="task">
+		<component :is="view" :msg.sync="listDate"></component>
+	</div>
+	<script src="static/js/require.js"></script>
+	<script>
+	require.config({
+		"version": "0.1.0",
+    	"name": "Task",
+    	"hash": "3",
+		"cache": true,
+		"alias": {
+			"vue": "static/js/vue.js",
+			"zepto": "static/js/zepto.js",
+			"task": "static/js/task/task.js",
+			"weekly": "components/weekly/weekly.js",
+			"check": "components/check/check.js",
+			"main": "components/main/main.js",
+			"login": "components/login/login.js",
+			"tip": "components/tip/tip.js"
+		},
+		"deps": {
+			"static/js/task/task.js": ["vue", "zepto", "tip", "login", "weekly", "check", "main"]
+		}
+	});
+	require.async(['task']);
+	</script>
+</body>
+</html>
