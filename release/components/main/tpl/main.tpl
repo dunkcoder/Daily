@@ -13,7 +13,7 @@
 		</nav>
 	</header>
 	<section class="main">
-		<component :is="view" keep-alive></component>
+		<component :is="view"  keep-alive transition="fade" transition-mode="out-in"></component>
 	</section>
 	<footer>
 		<ul class="f">

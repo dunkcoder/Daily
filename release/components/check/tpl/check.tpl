@@ -4,7 +4,6 @@
 	<div class="history-list">
 		<div class="item" v-for="list in lists">
 			<div class="icon"></div>
-			<p class="history-title"><a href="javascript:;">{{ list.name }}</a></p>
 			<p class="history-title"><a href="javascript:;">{{ list.date }}</a></p>
 			<p class="history-title"><a href="javascript:;">{{ list.content }}</a></p>
 		</div>

@@ -4,11 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Task</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<style>*{padding:0;margin:0;text-decoration:none;list-style:none;box-sizing:border-box}body{background-color:#f2f5e9}input{display:block;width:100%;margin:0;padding:9px 10px;border:1px solid #ccc;outline:0;font-size:15px;line-height:24px;border-radius:4px;box-shadow:none;font-family:helvetica,Arial;-webkit-appearance:none}input:active{background:#afd3ca}.btn-submit{display:block;width:100%;text-align:center;padding:10px 0;color:#fff;background-color:#a6bbb6;border:0;font-size:16px;line-height:24px;font-weight:700;outline:0;-webkit-tap-highlight-color:transparent;border-radius:4px}.btn-submit:active{background:#afd3ca}</style>
+	<style>*{padding:0;margin:0;text-decoration:none;list-style:none;box-sizing:border-box}body{background-color:#f2f5e9}input{display:block;width:100%;margin:0;padding:9px 10px;border:1px solid #ccc;outline:0;font-size:15px;line-height:24px;border-radius:4px;box-shadow:none;font-family:helvetica,Arial;-webkit-appearance:none}input:active{background:#afd3ca}.btn-submit{display:block;width:100%;text-align:center;padding:10px 0;color:#fff;background-color:#a6bbb6;border:0;font-size:16px;line-height:24px;font-weight:700;outline:0;-webkit-tap-highlight-color:transparent;border-radius:4px}.btn-submit:active{background:#afd3ca}.fade-transition{transition:opacity .3s ease}.fade-enter,.fade-leave{opacity:0}</style>
 </head>
 <body ontouchstart="">
 	<div id="task">
-		<component :is="view" :msg.sync="listDate"></component>
+		<component :is="view" keep-alive transition-mode="out-in"></component>
 	</div>
 	<script src="static/js/require.js"></script>
 	<script>

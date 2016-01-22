@@ -16,6 +16,13 @@ define('static/js/task/task.js', function (require, exports, module) {
 		}
 	});
 
+	//url2ls
+	var host = 'http://10.252.56.175',
+		port = ':8080',
+		path = '/dailyreport/api',
+		URL = host + port + path;
+	localStorage.setItem('URL', URL);
+
 	//hash管理page
 	(function () {
 		var hash = window.location.hash;

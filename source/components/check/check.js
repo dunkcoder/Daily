@@ -35,8 +35,6 @@ define('components/check/check.js', function (require, exports, module){
 						
 						_this.lists = data;
 
-						localStorage.setItem('NAME', data[0].name);
-
 					}
 				});
 

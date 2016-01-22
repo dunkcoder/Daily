@@ -28,13 +28,15 @@ define('components/login/login.js', function (require, exports, module){
 					date = new Date(),
 					time = date.getTime();
 
+				var URL = localStorage.getItem('URL');
+
 				//执行校验
 				$this.unTest();
 
 				if (!this.test1 && !this.once) {
-					console.log('ajax');
+
 					$.ajax({
-						url: 'http://10.252.56.175:8080/dailyreport/api',
+						url: URL,
 						data: {
 							action: 'list',
 							_: time,

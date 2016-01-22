@@ -5,8 +5,7 @@ define('components/weekly/weekly.js', function (require, exports, module){
 
 	var Vue = require('vue');
 	var check = require('check');
-	console.log('checkcheckcheckcheckcheck');
-	console.log(check);
+
 	module.exports = Vue.extend({
 		template: __inline('./tpl/weekly.tpl'),
 		activate: function (done) {
@@ -35,8 +34,10 @@ define('components/weekly/weekly.js', function (require, exports, module){
 						content: content
 					};
 
+				var URL = localStorage.getItem('URL');
+
 				$.ajax({
-					url: 'http://10.252.56.175:8080/dailyreport/api',
+					url: URL,
 					data: data,
 					dataType: 'jsonp',
 					success: function (data) {
